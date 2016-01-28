@@ -72,3 +72,28 @@ $args = array(
 }
 
 add_action( 'init', 'dwwp_register_post_type' );
+
+
+function dwwp_register_taxonomy(){
+
+	$singular = 'Location';
+	$plural = 'Locations';
+
+	$labels = array(
+	
+	);
+
+	$args = array(
+		'hierarchical'			=>	true,
+		'labels'				=> $labels,
+		'show_ui'				=> true,
+		'show_admin_column'		=> true,
+		'update_count_callback'	=> '_update_post_term_count',
+		'query_var'				=> true,
+		'rewrite'				=> array( 'slug' => 'location'),
+	);
+		
+}
+
+add_action('inti','dwwp_register_taxonomy')
+
