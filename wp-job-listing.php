@@ -14,4 +14,4 @@ if( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-include 'wp-job-cpt.php';
+include (plugin_dir_path(__FILE__) . 'wp-job-cpt.php' );
